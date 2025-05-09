@@ -23,6 +23,8 @@ function Intro() {}
 
 function SkillList() {}
 
+function Skill() {}
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
