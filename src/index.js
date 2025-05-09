@@ -5,7 +5,7 @@ import "./styles.css";
 function App() {
   return (
     <div className="card">
-      <Avatar />
+      <Avatar avatarImage />
       <div className="data">
         <Intro />
         {/* Should contain one Skill component
@@ -16,6 +16,12 @@ function App() {
     </div>
   );
 }
+
+function Avatar() {}
+
+function Intro() {}
+
+function SkillList() {}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
