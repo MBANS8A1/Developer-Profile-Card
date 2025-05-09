@@ -17,9 +17,25 @@ function App() {
   );
 }
 
-function Avatar() {}
+function Avatar() {
+  return (
+    <img className="avatar" src="cyber_developer.jpg" alt="avatar_image" />
+  );
+}
 
-function Intro() {}
+function Intro() {
+  return (
+    <div>
+      <h1>Sean Naples</h1>
+      <p>
+        Sean is a cybersecurity expert that specializes in the areas of cloud
+        security, application security and monitoring of database management
+        systems. His hobbies include fishing, football and camping. He speaks
+        fluently Spanish and French langauges.
+      </p>
+    </div>
+  );
+}
 
 function SkillList() {}
 
