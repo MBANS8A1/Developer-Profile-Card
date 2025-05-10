@@ -40,17 +40,21 @@ function Intro() {
 function SkillList() {
   return (
     <div className="skill-list">
-      <Skill skill="Crytography" emoji="💪" />
-      <Skill skill="Authentication and Authorization" emoji="💪" />
-      <Skill skill="AI and Machine Learning" emoji="👶" />
-      <Skill skill="Advanced Endpoint Protection" emoji="💪" />
+      <Skill skill="Crytography" emoji="💪" color="#add8e6" />
+      <Skill
+        skill="Authentication and Authorization"
+        emoji="💪"
+        color="#80ef80"
+      />
+      <Skill skill="AI and Machine Learning" emoji="👶" color="yellow" />
+      <Skill skill="Advanced Endpoint Protection" emoji="💪" color="#fffdd0" />
     </div>
   );
 }
 
 function Skill(props) {
   return (
-    <div className="skill">
+    <div className="skill" style={{ backgroundColor: props.color }}>
       <span>{props.skill}</span>
       <span>{props.emoji}</span>
     </div>
