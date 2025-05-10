@@ -37,9 +37,25 @@ function Intro() {
   );
 }
 
-function SkillList() {}
+function SkillList() {
+  return (
+    <div className="skill-list">
+      <Skill skill="Crytography" emoji="💪" />
+      <Skill skill="Authentication and Authorization" emoji="💪" />
+      <Skill skill="AI and Machine Learning" emoji="👶" />
+      <Skill skill="Advanced Endpoint Protection" emoji="💪" />
+    </div>
+  );
+}
 
-function Skill() {}
+function Skill(props) {
+  return (
+    <div className="skill">
+      <span>{props.skill}</span>
+      <span>{props.emoji}</span>
+    </div>
+  );
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
