@@ -19,7 +19,10 @@ function App() {
 
 function Avatar() {
   return (
-    <img className="avatar" src="cyber_developer.jpg" alt="avatar_image" />
+    <figure>
+      <img className="avatar" src="cyber_developer.jpg" alt="avatar_image" />
+      <figcaption>Designed by Freepik</figcaption>
+    </figure>
   );
 }
 
