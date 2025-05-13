@@ -6,52 +6,52 @@ const skills = [
   {
     skill: "HTML+CSS",
     level: "advanced",
-    color: "#2662EA",
+    colour: "#2662EA",
   },
   {
     skill: "JavaScript",
     level: "advanced",
-    color: "#EFD81D",
+    colour: "#EFD81D",
   },
   {
     skill: "Web Design",
     level: "advanced",
-    color: "#C3DCAF",
+    colour: "#C3DCAF",
   },
   {
     skill: "Git and GitHub",
     level: "intermediate",
-    color: "#E84F33",
+    colour: "#E84F33",
   },
   {
     skill: "React",
     level: "advanced",
-    color: "#60DAFB",
+    colour: "#60DAFB",
   },
   {
     skill: "Svelte",
     level: "beginner",
-    color: "#FF3B00",
+    colour: "#FF3B00",
   },
   {
     skill: "Cryptography",
     level: "intermediate",
-    color: "#add8e6",
+    colour: "#ADD8E6",
   },
   {
     skill: "Authentication and Authorization",
     level: "beginner",
-    color: "#80ef80",
+    colour: "#80ef80",
   },
   {
     skill: "AI and Machine Learning",
     level: "advanced",
-    color: "#FFFF00",
+    colour: "#FFFF00",
   },
   {
     skill: "Advanced Endpoint Protection",
     level: "advanced",
-    color: "#fffdd0",
+    colour: "#fffdd0",
   },
 ];
 function App() {
@@ -95,14 +95,24 @@ function Intro() {
 }
 
 function SkillList() {
-  return <div className="skill-list">{skills.map((skill)=>)}</div>;
+  return (
+    <div className="skill-list">
+      {skills.map((skill) => (
+        <Skill skill={skill.skill} colour={skill.colour} level={skill.level} />
+      ))}
+    </div>
+  );
 }
 
-function Skill(props) {
+function Skill({ skill, colour, level }) {
   return (
-    <div className="skill" style={{ backgroundColor: props.color }}>
-      <span>{props.skill}</span>
-      <span>{props.emoji}</span>
+    <div className="skill" style={{ backgroundColor: colour }}>
+      <span>{skill}</span>
+      <span>
+        {level === "beginner" && "👶"}
+        {level === "intermediate" && "👍"}
+        {level === "advanced" && "💪"}
+      </span>
     </div>
   );
 }
